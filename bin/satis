@@ -28,3 +28,6 @@ if ((!$loader = includeIfExists(__DIR__.'/../vendor/autoload.php')) && (!$loader
 
 $application = new Composer\Satis\Console\Application();
 $application->run();
+
+// Delete the tmp files to prevent space override.
+exec('rm -rf /tmp/composer_archive*');
