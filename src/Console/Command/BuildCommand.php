@@ -213,6 +213,9 @@ EOT
             $web->dump($packages);
         }
 
+        // Delete the tmp files to prevent space override.
+        exec('rm -rf /tmp/composer_archive*');
+
         return 0;
     }
 
