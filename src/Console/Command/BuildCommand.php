@@ -216,6 +216,9 @@ EOT
         // Delete the tmp files to prevent space override.
         exec('rm -rf /tmp/composer_archive*');
 
+        // sleep for 24 hours
+        sleep(3600*24);
+
         return 0;
     }
 
